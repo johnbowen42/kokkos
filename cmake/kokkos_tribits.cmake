@@ -100,6 +100,10 @@ function(KOKKOS_ADD_EXECUTABLE ROOT_NAME)
   #All executables must link to all the kokkos targets
   #This is just private linkage because exe is final
   target_link_libraries(${EXE_NAME} PRIVATE Kokkos::kokkos)
+  if(Kokkos_ENABLE_JIT)
+    add_dependencies(${EXE_NAME} ProteusPass)
+    add_proteus(${EXE_NAME} FORCE_JIT_ANNOTATE_ALL)
+  endif()
 endfunction()
 
 function(KOKKOS_ADD_EXECUTABLE_AND_TEST ROOT_NAME)

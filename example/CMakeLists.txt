@@ -14,3 +14,6 @@ if(_DEVICE_PARALLEL STREQUAL "NoTypeDefined"
   kokkos_add_example_directories(relocatable_function)
 endif()
 kokkos_add_example_directories(tutorial)
+if(Kokkos_ENABLE_JIT)
+  kokkos_add_example_directories(proteus)
+endif()

@@ -3,4 +3,5 @@ if(NOT Kokkos_INSTALL_TESTING)
 endif()
 
 kokkos_add_test_directories(unit_test)
+kokkos_add_test_directories(integration_test)
 kokkos_add_benchmark_directories(perf_test)
