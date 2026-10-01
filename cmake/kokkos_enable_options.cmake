@@ -48,6 +48,7 @@ kokkos_enable_option(IMPL_SYCL_OUT_OF_ORDER_QUEUES OFF "Whether to make Kokkos u
 kokkos_enable_option(TESTS OFF "Whether to build the unit tests")
 kokkos_enable_option(BENCHMARKS OFF "Whether to build the benchmarks")
 kokkos_enable_option(EXAMPLES OFF "Whether to build the examples")
+kokkos_enable_option(JIT OFF "Whether to enable Proteus JIT compilation for Kokkos kernels")
 if(Kokkos_ENABLE_BENCHMARKS)
   kokkos_enable_option(BENCHMARKS_HEAVY OFF "Whether to build and run the long benchmarks")
 endif()

@@ -211,6 +211,10 @@ check_git_setup()
 # 5) Check if optimizing for a particular architecture and add arch-specific flags
 kokkos_setup_build_environment()
 
+if(Kokkos_ENABLE_JIT)
+  include(${KOKKOS_SRC_PATH}/cmake/kokkos_setup_proteus.cmake)
+endif()
+
 # Finish off the build
 # 6) Recurse into subdirectories and configure individual libraries
 # 7) Export and install targets
